@@ -25,7 +25,7 @@ function mapFunc(thing, index) {
       sale.item = thing;
       break;
     case 1:
-      sale.price = thing;
+      sale.price = Number(thing);
       break;
     case 2:
       sale.quantity = thing;
@@ -68,15 +68,13 @@ function allSalesToArray(object) {
     };
     newSalesArray.push(sale);
   };
-
-
-  for (var j = 0; j < newSalesArray.length; j++) {
-    for (var k = 0; k < object[saleDates[j]].length; k++) {
+  newSalesArray.map(function(thingj, indexj) {
+    object[saleDates[indexj]].map(function(thingk) {
       sale = {};
-      object[saleDates[j]][k].map(mapFunc);
-      newSalesArray[j].sales.push(sale)
-    }
-  }
+      thingk.map(mapFunc);
+      thingj.sales.push(sale);
+    });
+  });
   return newSalesArray;
 }
 
