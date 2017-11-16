@@ -75,9 +75,18 @@ You are working with a candy shop dataset and need to some sales analysis. You'l
 
 ## Instructions
 
-* Write a function called `getTotalItemSales` that takes a list of sales and an item ID, and returns the total number of sales for that item. For example, if you give it the sales list about and give it the ID of `3`, you should return `5`.
+* Write a function called `getTotalItemSales` that takes a list of sales and an item ID, and returns the total number of sales for that item. For example, if you give it the sales list above and give it the ID of `3`, you should return `5`.
 
 * Write a function called `addTotalSalesToItems` that takes a list of sales and a list of items and returns the list of items with the total number of sales appended. For example, if you give it the list of sales and the list of items, you should return:
+
+RUBRIC
+* [ ] 3 passing tests
+* [ ] `getTotalItemSales` uses `reduce`
+* [ ] `addTotalSalesToItems` uses `map`
+* [ ] `addTotalValueToItems` uses `map`
+* [ ] Meaningful variable names
+* [ ] Proper indentation of all code
+
 
 ```js
 [{
