@@ -68,11 +68,11 @@ function allSalesToArray(object) {
     };
     newSalesArray.push(sale);
   };
-  newSalesArray.map(function(thingj, indexj) {
-    object[saleDates[indexj]].map(function(thingk) {
+  newSalesArray.map(function(currentValue, index) {
+    object[saleDates[index]].map(function(newValue) {
       sale = {};
-      thingk.map(mapFunc);
-      thingj.sales.push(sale);
+      newValue.map(mapFunc);
+      currentValue.sales.push(sale);
     });
   });
   return newSalesArray;
