@@ -40,7 +40,7 @@ function mapFunc(thing, index) {
 // Test 1
 function candySalesToObject(arr) {
    var candySalesToObject = arr.reduce (reduceFun,{});
-return candySalesToObject;
+   return candySalesToObject;
 }
 
 // Test 2
