@@ -13,8 +13,8 @@ function reduceFun(sale, thing, index) {
     case 2:
       sale.quantity = thing;
       break;
-    default:
-     return;
+      default:
+      return;
   }
   return sale;
 }
@@ -30,8 +30,8 @@ function mapFunc(thing, index) {
     case 2:
       sale.quantity = thing;
       break;
-    default:
-     return;
+      default:
+      return;
   }
   return sale;
 }
@@ -39,8 +39,8 @@ function mapFunc(thing, index) {
 
 // Test 1
 function candySalesToObject(arr) {
-   var candySalesToObject = arr.reduce (reduceFun,{});
-   return candySalesToObject;
+  var candySalesToObject = arr.reduce (reduceFun,{});
+  return candySalesToObject;
 }
 
 // Test 2
@@ -79,8 +79,7 @@ function allSalesToArray(object) {
 }
 
 module.exports = {
-    // Uncomment these functions as you write them
-    candySalesToObject,
-    salesDayToObject,
-    allSalesToArray
+  candySalesToObject,
+  salesDayToObject,
+  allSalesToArray
 };
