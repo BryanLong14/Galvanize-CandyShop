@@ -2,16 +2,16 @@
 var candySalesDay = {};
 var sale = {};
 
-function reduceFun(sale, thing, index) {
+function reduceFun(sale, candy, index) {
   switch (index) {
     case 0:
-      sale.item = thing;
+      sale.item = candy;
       break;
     case 1:
-      sale.price = thing;
+      sale.price = candy;
       break;
     case 2:
-      sale.quantity = thing;
+      sale.quantity = candy;
       break;
       default:
       return;
@@ -19,16 +19,16 @@ function reduceFun(sale, thing, index) {
   return sale;
 }
 
-function mapFunc(thing, index) {
+function mapFunc(candy, index) {
   switch (index) {
     case 0:
-      sale.item = thing;
+      sale.item = candy;
       break;
     case 1:
-      sale.price = Number(thing);
+      sale.price = Number(candy);
       break;
     case 2:
-      sale.quantity = thing;
+      sale.quantity = candy;
       break;
       default:
       return;
@@ -44,8 +44,8 @@ function candySalesToObject(arr) {
 }
 
 // Test 2
-function reducePushFun(item, thing) {
-  candySalesDay.sales.push(thing.reduce(reduceFun, {}));
+function reducePushFun(item, candy) {
+  candySalesDay.sales.push(candy.reduce(reduceFun, {}));
 }
 
 function salesDayToObject(date, obj) {
@@ -61,7 +61,7 @@ function allSalesToArray(object) {
   var saleDates = Object.keys(object);
   saleDates.map(mapFun);
 
-  function mapFun(thing, index) {
+  function mapFun(candy, index) {
     sale = {
       date: saleDates[index],
       sales: []
